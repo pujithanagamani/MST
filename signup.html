@@ -1,0 +1,139 @@
+<html>
+
+<head>
+        
+<style>
+body {
+        background-image:url("https://image.shutterstock.com/image-photo/food-groceries-shopping-basket-on-260nw-1177346140.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+}
+.reg:hover
+{
+         background-color: silver;
+}
+Button
+{
+         cursor: pointer;
+}
+</style>
+<script>
+ function validateForm()
+ {
+var un = document.registration.name.value;
+var email = document.registration.email.value;
+var gen = document.registration.gender.value;
+var age = document.registration.age.value;
+var add = document.registration.address.value;
+var pin=document.registration.pincode.value;
+var pass=document.registration.password.value;
+var number=document.registration.number.value;
+
+if(un=="" || un=="null")
+{
+alert("please enter ur name");
+document.registration.name.focus();
+return false;
+}
+if(email=="" || email=="null")
+{
+alert("please enter ur email");
+document.registration.email.focus();
+return false;
+}
+if(gen=="" || gen=="null")
+{
+alert("Please select the gender");
+document.registration.gender[0].focus();
+return false;
+}
+if(age=="" || age=="null")
+{
+alert("please enter ur age");
+document.registration.age.focus();
+return false;
+}
+
+if(add=="" || add=="null")
+{
+alert("please enter ur address");
+document.registration.address.focus();
+return false;
+}
+
+if(pin=="" || pin=="null")
+{
+alert("please enter ur pincode");
+document.registration.pincode.focus();
+return false;
+}
+if(pass=="" || pass=="null")
+{
+alert("please enter ur password");
+document.registration.password.focus();
+return false;
+}
+
+if(number=="" || number=="null")
+{
+alert("please enter your contact number");
+document.registration.number.focus();
+return false;
+}
+alert("Registration successfull");
+return true;
+ }
+</script>
+</head>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br><br>
+<body>
+<center>
+<form action="/signup" method="POST">
+<center><table></center>
+                    <tr>
+                        <td><br>Username:</td>
+                        <td><br><input type="text" name="name" id="name"/><br><br></td> 
+                    </tr>
+                    <tr>
+                        <td>Email ID:</td>
+                        <td><input type="email" name="email" id="email"/><br><br></td> 
+                    </tr>
+                    <tr>
+                        <td>Gender:</td>
+                        <td><input type="text" name="gender" id="gender"/><br><br></td> 
+                    </tr> 
+                    <tr>
+                        <td>Age:</td>
+                        <td><input type="text" name="age" id="age"/><br><br></td> 
+                    </tr> 
+                    <tr>
+                        <td>Address:</td>
+                        <td><input type="text" name="address" id="address"/><br><br></td> 
+                    </tr> 
+                    <tr>
+                        <td>Pin Code:</td>
+                        <td><input type="text" name="pincode" id="pincode"/><br><br></td> 
+                    </tr> 
+                    <tr>
+                        <td>Password:</td>
+                        <td><input type="password" name="password" id="password"/><br><br></td>
+                    </tr>
+                    <tr>
+                        <td>Phone number:</td>
+                        <td><input type="text" name="phno" id="phno"/><br><br></td> 
+                    </tr>   
+                </table>
+<input type="submit">
+<input type="reset">
+ </center>
+            </form> 
+            
+    </body>
+ 
+</html>
+

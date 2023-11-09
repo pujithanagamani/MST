@@ -1,0 +1,243 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>eGrocery store</title>
+<link rel="shortcut icon" href="images/fav-icon.png"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{
+font-family: 'Poppins', sans-serif;
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+outline:none;border:none;
+text-decoration:none;
+text-transform:capitalize;
+transition:all 0.2s linear;
+}
+a{
+text-decoration: none;
+}
+html{
+font-size:62.5%;
+overflow-x:hidden;
+scroll-behavior:smooth;
+scroll-padding-top:7rem;
+}
+body{
+ margin: 0px;
+ padding: 0px;
+ font-family: poppins;
+}
+.btn{
+margin-top:1rem;
+display:inline-block;
+padding:0.8rem 3rem;
+font-size:1.7rem;
+border-radius:0.5rem;
+border:0.2rem solid #130f40;
+color:#130f40;
+cursor:pointer;
+}
+.btn:hover{
+background:#40aa54;
+color:#ffffff;
+}
+.header{
+position:fixed;
+top:0; left:0; right:0;
+z-index:1000;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:1rem 9%;
+background:#ffffff;
+box-shadow:0 0.5rem 1rem rgba(0,0,0,0.1);
+}
+.header .logo{
+font-size:2.5rem;
+font-weight:bolder;
+color:#130f40;
+}
+.header .logo i{
+color:#40aa54;
+}
+.header .navbar a{
+font-size:1.7rem;
+margin:0 1rem;
+color:#130f40;
+}
+.header .navbar a:hover{
+color:#40aa54;
+}
+.header .icons div{
+height:4.5rem;
+width:4.5rem;
+line-height:4.5rem;
+border-radius:0.5rem;
+background:#eee;
+color:#130f40;
+font-size:2rem;
+margin-left:0.3rem;
+cursor:pointer;
+text-align:center;
+}
+.header .icons div:hover{
+background:#40aa54;
+color:#ffffff;
+}
+section{
+padding:2rem 9%;
+}
+
+.header .search-form{
+position:absolute;
+top:110%;right:-110%;
+width:50rem;
+height:5rem;
+background:#ffffff;
+border-radius:0.5rem;
+overflow:hidden;
+display:flex;
+align-items:center;
+box-shadow:0 0.5rem 1rem rgba(0,0,0,0.1);
+}
+.header .search-form.active{
+right:2rem;
+transition:0.4s linear;
+}
+.header .search-form input{
+height:100%;
+width:100%;
+background:none;
+text-transform:none;
+font-size:1.6rem;
+color:#130f40;
+padding:0 1.5rem;
+}
+.header .search-form label{
+font-size:2.2rem;
+padding-right:1.5rem;
+color:#130f40;
+cursor:pointer;
+}
+.header .search-form label:hover{
+color:#40aa54;
+}
+.header .shopping-cart{
+position:absolute;
+top:110%; right:-110%;
+padding:1rem;
+border-radius:0.5rem;
+box-shadow:0 0.5rem 1rem rgba(0,0,0,0.1);
+width:35rem;
+background:#ffffff;
+}
+.header .shopping-cart.active{
+right:2rem;
+transition:0.4s linear;
+}
+.header .shopping-cart .box{
+display:flex;
+align-items:center;
+gap:1rem;
+position:relative;
+margin:1rem 0;
+}
+.header.shopping-cart .box img{
+height:10rem;
+}
+.header .shopping-cart .box .fa-trash{
+font-size:2rem;
+position:absolute;
+top:50%; right:2rem;
+cursor:pointer;
+color:#778899;
+transform:translateY(-50%);
+}
+.header .shopping-cart .box .fa-trash:hover{
+color:#130f40;
+}
+.header .shopping-cart .box .content h3{
+color:#130f40;
+font-size:1.7rem;
+padding-bottom:1rem;
+}
+.header .shopping-cart .box .content span{
+color:#778899;
+font-size:1.6rem;
+}
+.header .shopping-cart .box .content .quantity{
+padding-left:1rem;
+}
+.header .shopping-cart .total{
+font-size:2.5rem;
+padding:1rem 0;
+text-align:center;
+color:#130f40;
+}
+.header .shopping-cart .btn{
+display:flex;
+text-align:center;
+margin:1rem;
+}
+.home{
+display:flex;
+align-items:center;
+justify-content:center;
+background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVQc8WTwoLRuaInG2vhcyJRqeQxQLxKFF2C47fselKtShKf3CtC2-VFXEGXN-uMbvJ0T4&usqp=CAU") no-repeat;
+ border-radius: 30px;
+ margin: 10px auto;
+position:relative;
+background-position:center;
+background-size:cover;
+padding-top:40rem;
+padding-bottom:10rem;
+}
+.home .content{
+text-align:center;
+width:60rem;
+}
+.home .content h3{
+color:#130f40;
+font-size:3rem;
+}
+.home .content h3 span{
+color:#FF7F50;
+}
+.home .content p{
+color:	#000080;
+font-size:1.7rem;
+padding:1rem 0;
+line-height:1.8;
+}
+</style>
+</head>
+<body>
+<header class="header">
+<a href="#" class="logo"><i class="fas fa-shopping-basket"></i>Grocery</a>
+</a>
+<nav class="navbar">
+<a href="#home" >Home</a>
+<a href="/delete">Delete</a>
+<a href="/display" >Display Single Record</a>
+<a href="/displayall" >Display All records</a>
+<a href="/update" >Update</a>
+</nav>
+
+</header>
+<section class="home" id="home">
+<div class="content">
+<h3> fresh and <span>organic</span> products for your</h3>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Aliquam libero nostrum veniam facere tempore nisi.</p>
+<a href="#" class="btn">shop now</a>
+</div>
+</section>
+<script src="script.js"></script>
+</body>
+</html>

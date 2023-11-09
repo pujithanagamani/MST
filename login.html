@@ -1,0 +1,153 @@
+<html>
+ <head>
+<style>
+body {
+		background color: skyblue;
+		background-image:url("https://wallpapercave.com/wp/wp4184154.jpg");
+		background-repeat:no-repeat;
+		background-size:100% 100%;
+	}
+#wel{
+		color:red;
+		text-align: center;
+		background-color:white;
+		font-family:fantasy;
+		font-style:italic;
+		font-size:40;
+		background-repeat:no-repeat;
+		background-size:cover;
+	}
+#img{
+		width:200px;
+		height:200px;
+		text-align:center;
+		border-style:double;
+		border-color:pink;
+	}	
+#mar{
+		background-color:tomato;
+		color:white;
+		text-font:serif;
+	}
+#im{
+		width:50px;
+		height:50px;
+	}
+.forgot:hover{
+			color:white;
+			}
+.sub: hover{
+				background-color:silver;
+		}	
+.reg:hover
+{
+	background-color:silver;
+}
+.blink 
+{
+    animation: blinker 1s linear infinite;
+    color: red;
+    font-family: sans-serif;
+ }
+@keyframes blinker 
+{
+    50% 
+	{
+          opacity: 0;
+	}
+}
+.container
+{
+   padding:25px;
+}
+input[type=text],input[type=password]
+{
+width:20%;
+margin:8px;
+padding:12px,20px;
+display:inline-block;
+border:2px,solid green;
+box-sizing:border-box;
+}
+button 
+{    
+background-color:blue;
+width: 10%; 
+padding:5px;
+color: white;   
+margin: 5px 0px;   
+border: none;   
+cursor: pointer;   
+}
+button:hovever
+{
+  opacity:0.7;
+}
+
+</style>
+<script>
+	function hii()
+	{
+		var email=document.index.email.value;
+		var pass=document.index.password.value;
+		var letters=/^[a-zA-Z\s]+$/;
+		var num=/^[0-9]+$/;
+		var upper=/[A-Z]+/.test(pass);
+		var lower=/[a-z]+/.test(pass);
+		var special=/[!.@#$%*]+/.test(pass);
+		var temp=0;
+
+		if(email=="" || email=="null")
+		{
+			alert("please enter email");
+			document.index.email.focus();
+			return false;
+		}
+		if(!user.match(letters))
+		{
+			alert("please enter Alphabets only");
+			document.index.email.focus();
+			return false;
+		}
+		if(pass=="" || pass=="null")
+		{
+			alert("please enter ur password");
+			document.index.password.focus();
+			return false;
+		}
+		if(upper&&lower&&special&&num)
+		{
+			temp=1;
+		}
+		if(temp==0)
+		{
+			alert("Password must be in the format of : one letter must be capital,one letter must be small, one special symbol, one number");
+			document.index.password.focus();
+			return false;
+		}
+		return true;
+	}
+</script>
+</head>
+<body>
+
+<h2 align="center" id="sig">
+<b><font color="blue" size="10">Sign in</b></font>
+</h2>
+<br><br><br><br>
+<div class="container">
+<center>
+ <form action="/login" method="POST">
+ <label for="email">Email:</label>
+ <input type="email" id="email" name="email" required>
+ <br><br>
+<label for="password">Password:</label>
+ <input type="password" id="password" name="password" required>
+ <br><br>
+<a href="/signup">don't have an account signup</a>
+ <input type="submit" value="Submit">
+</center>
+ </form>
+</div>
+ </body>
+ </html>
